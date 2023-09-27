@@ -39,3 +39,9 @@ html {
   color: var(--secondary);
   background-color: var(--text);
 }
+
+@media (max-width: 600px) {
+  .welcome-card {
+    width: 100%;
+  }
+}
