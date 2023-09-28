@@ -12,10 +12,13 @@
   padding: 0;
   margin: 0;
   font-family: "Archivo", sans-serif;
+  box-sizing: border-box;
 }
+
 h1 {
   font-weight: normal;
 }
+
 body {
   background-color: var(--text);
   color: var(--text);
@@ -24,14 +27,18 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
 html {
   max-height: 100vh;
 }
+
 .special {
   color: var(--accent);
 }
+
 .welcome-card {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -40,9 +47,6 @@ html {
 }
 
 @media (max-width: 600px) {
-  .welcome-card {
-    width: 100% !important;
-  }
   body {
     display: block;
   }
