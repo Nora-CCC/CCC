@@ -35,7 +35,38 @@ html {
 .special {
   color: var(--accent);
 }
-
+.catcontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.catcontainer p {
+  position: absolute;
+  z-index: -1;
+  animation-name: speen;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+img {
+  max-width: 100%;
+  z-index: 2;
+  transition-delay: 1s !important;
+  transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+}
+.catcontainer:hover img {
+  transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -webkit-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -moz-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -ms-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -o-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+}
 .welcome-card {
   max-width: 600px;
   width: 100%;
@@ -45,9 +76,16 @@ html {
   color: var(--secondary);
   padding: 20px;
 }
-
 @media (max-width: 600px) {
   body {
     display: block;
+  }
+}
+@keyframes speen {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
