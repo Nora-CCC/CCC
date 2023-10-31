@@ -1,0 +1,80 @@
+---
+import cat from './cat.webp'
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_TITLE_SHORT } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE_SHORT} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>🧑🏻‍💻 Hello there!</h1>
+			<p>
+				Welcome to the official <a target="_blank" href="https://www.stlawrencecollege.ca">St. Lawrence College</a> Cornwall Computer Club, CCC. 
+				For some reason, we've dedicated our careers to the odd realm of coding. We love the 1% satisfaction after 99 syntax errors, and a blue screen.
+			</p>
+			<p>
+				<code>
+					Did we mention, we like computers?</code> Cats too, though dogs are also popular.
+			</p>
+			<p>Here, a cat pic for you.
+				<div class="catcontainer">
+					<img src={cat.src} alt="A flying cat">
+					<h6>
+						LE CATTZE FLEW
+					</h6>
+				</div>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	.catcontainer {
+		position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	}
+	.catcontainer h6 {
+position: absolute;
+  z-index: -1;
+  animation-name: speen;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-size: small;
+	}
+	.catcontainer img {
+		z-index: 2;
+  transition-delay: 2s !important;
+  transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+	}
+	.catcontainer:hover img {
+  transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -webkit-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -moz-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -ms-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+  -o-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
+}
+	@keyframes speen {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
