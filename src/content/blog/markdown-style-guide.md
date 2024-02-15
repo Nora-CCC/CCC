@@ -4,7 +4,7 @@ description: "Here is a sample of some basic Markdown syntax that can be used wh
 pubDate: "Jul 01 2023"
 heroImage: "/blog-placeholder-2.jpg"
 postNum: 0
-published: true
+published: false
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content.
@@ -103,13 +103,13 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Example HTML5 Document</title>
+    </head>
+    <body>
+        <p>Test</p>
+    </body>
 </html>
 ```
 ````
@@ -119,13 +119,13 @@ Output
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Example HTML5 Document</title>
+    </head>
+    <body>
+        <p>Test</p>
+    </body>
 </html>
 ```
 
@@ -152,40 +152,40 @@ Output
 #### Syntax
 
 ```markdown
-- List item
-- Another item
-- And another item
+-   List item
+-   Another item
+-   And another item
 ```
 
 #### Output
 
-- List item
-- Another item
-- And another item
+-   List item
+-   Another item
+-   And another item
 
 ### Nested list
 
 #### Syntax
 
 ```markdown
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
+-   Fruit
+    -   Apple
+    -   Orange
+    -   Banana
+-   Dairy
+    -   Milk
+    -   Cheese
 ```
 
 #### Output
 
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
+-   Fruit
+    -   Apple
+    -   Orange
+    -   Banana
+-   Dairy
+    -   Milk
+    -   Cheese
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 

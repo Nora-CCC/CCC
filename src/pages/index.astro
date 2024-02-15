@@ -1,5 +1,6 @@
 ---
-import cat from './cat.webp'
+import cat from './cat.jpg'
+import map from './map.jpg'
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -21,60 +22,29 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_TITLE_SHORT } from '../consts';
 			</p>
 			<p>
 				<code>
-					Did we mention, we like computers?</code> Cats too, though dogs are also popular.
+					Did we mention, we like computers?</code>
+                    <span class="cat"> Cats
+                            <img src={cat.src} class="catjoke" alt="A photo of a hidden cat"> 
+                    </span> too, though dogs are also popular.
 			</p>
-			<p>Here, a cat pic for you.
-				<div class="catcontainer">
-					<img src={cat.src} alt="A flying cat">
-					<h6>
-						LE CATTZE FLEW
-					</h6>
-				</div>
+            <h2>Info</h2>
+            <p>Our meetings are held every wednesday at 4:30PM in room A321.</p>
+			<p>We meet in room A321 (see image below for reference).
+                <img src={map.src} alt="Map to room A321">
 			</p>
+            You must be a SLC student to join the team. <a href="https://teams.microsoft.com/l/team/19%3AnseAtTTvhgG8g6m2_mWnIEAYMG_h5pezZViuDZ6a6tk1%40thread.tacv2/conversations?groupId=a1e5295a-1e7d-47bb-accf-fb57bd470930&tenantId=974d3927-9bb4-48c9-b65c-6094393d030b" target="_blank">MS teams link</a>
 		</main>
 		<Footer />
 	</body>
 </html>
 <style>
-	.catcontainer {
-		position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-	}
-	.catcontainer h6 {
-position: absolute;
-  z-index: -1;
-  animation-name: speen;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  font-size: small;
-	}
-	.catcontainer img {
-		z-index: 2;
-  transition-delay: 2s !important;
-  transition: all 1s ease-out;
-  -webkit-transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
-  -ms-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-	}
-	.catcontainer:hover img {
-  transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
-  -webkit-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
-  -moz-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
-  -ms-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
-  -o-transform: rotate(-30deg) translateX(150vw) translateY(-150vh);
-}
-	@keyframes speen {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+	.catjoke {
+        width: 100%;
+        max-width: 300px;
+        left: 50%;
+        display: none;
+    }
+    .cat:active .catjoke {
+        display: block;
+    }
 </style>
